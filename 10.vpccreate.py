@@ -14,6 +14,6 @@ def fnCreateDefaultVPC(vpcClient):
     
 #Driver Code Workflow
 if __name__=="__main__":
-    vpcclient=boto3.client("ec2")
+    vpcclient=boto3.client("ec2",region_name="eu-central-1")
     vpcId=fnCreateDefaultVPC(vpcclient)
     print(vpcId)
