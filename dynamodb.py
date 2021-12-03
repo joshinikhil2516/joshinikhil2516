@@ -17,20 +17,20 @@ ks=[
 attributeDefinations=[
     {
     "AttributeName":"Name",
-    "KeyType":"HASH"
+    "AttributeType":"S"
 },
 {
     "AttributeName":"Email",
-    "KeyType":"RANGE"
+    "AttributeType":"S"
 }
 ]
-provisionedThroughput={"ReadCapacityUnits":1,"WriteCapacity":1}
+provisionedThroughput={"ReadCapacityUnits":1,"WriteCapacityUnits":1}
 
 table=dynamodb.create_table(
-    TableName="NikhilDDB",
+    TableName="nikhildbb",
     KeySchema=ks,
-    AttributeDefinations=attributeDefinations,
-    ProvisionedThroughPut=provisionedThroughput
+    AttributeDefinitions=attributeDefinations,
+    ProvisionedThroughput=provisionedThroughput
 )
 
 print("Table",table)
